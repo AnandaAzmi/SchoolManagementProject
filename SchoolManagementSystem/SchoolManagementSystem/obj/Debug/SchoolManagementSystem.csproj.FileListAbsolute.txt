@@ -10,3 +10,5 @@ D:\Semester 3\Object Oriented Programming\School_Management_System\SchoolManagem
 D:\Semester 3\Object Oriented Programming\School_Management_System\SchoolManagementProject\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.CoreCompileInputs.cache
 D:\Semester 3\Object Oriented Programming\School_Management_System\SchoolManagementProject\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.exe
 D:\Semester 3\Object Oriented Programming\School_Management_System\SchoolManagementProject\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.pdb
+D:\Semester 3\Object Oriented Programming\School_Management_System\SchoolManagementProject\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.LoginPage.resources
+D:\Semester 3\Object Oriented Programming\School_Management_System\SchoolManagementProject\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.LoadingPage.resources
