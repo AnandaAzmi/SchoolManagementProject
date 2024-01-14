@@ -56,12 +56,12 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
+            this.DetailSiswa = new System.Windows.Forms.Label();
+            this.DetailGuru = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
+            this.JmlhSiswa = new System.Windows.Forms.Label();
+            this.JmlhGuru = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label42 = new System.Windows.Forms.Label();
@@ -95,6 +95,7 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -122,6 +123,7 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1073, 524);
             this.flowLayoutPanel1.TabIndex = 3;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // panel4
             // 
@@ -165,7 +167,7 @@
             this.label25.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.Location = new System.Drawing.Point(182, 234);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(126, 17);
+            this.label25.Size = new System.Drawing.Size(105, 13);
             this.label25.TabIndex = 20;
             this.label25.Text = "smanba@gmail.com";
             // 
@@ -175,7 +177,7 @@
             this.label22.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(182, 208);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(97, 17);
+            this.label22.Size = new System.Drawing.Size(83, 13);
             this.label22.TabIndex = 19;
             this.label22.Text = "0511-87345678";
             // 
@@ -185,7 +187,7 @@
             this.label21.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(182, 208);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(0, 17);
+            this.label21.Size = new System.Drawing.Size(0, 13);
             this.label21.TabIndex = 18;
             this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
@@ -195,7 +197,7 @@
             this.label3.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(233, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(239, 31);
+            this.label3.Size = new System.Drawing.Size(199, 25);
             this.label3.TabIndex = 17;
             this.label3.Text = "IDENTITAS SEKOLAH";
             // 
@@ -205,7 +207,7 @@
             this.label20.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(182, 180);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(178, 17);
+            this.label20.Size = new System.Drawing.Size(149, 13);
             this.label20.TabIndex = 16;
             this.label20.Text = "DKI Jakarta, 12345, Indonesia";
             // 
@@ -215,7 +217,7 @@
             this.label19.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(182, 160);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(355, 17);
+            this.label19.Size = new System.Drawing.Size(294, 13);
             this.label19.TabIndex = 15;
             this.label19.Text = "Jalan Teknologi Baru No. 123 Kelapa Gading, Jakarta Utara,";
             // 
@@ -225,7 +227,7 @@
             this.label18.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(182, 129);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(16, 17);
+            this.label18.Size = new System.Drawing.Size(14, 13);
             this.label18.TabIndex = 14;
             this.label18.Text = "A";
             // 
@@ -235,7 +237,7 @@
             this.label17.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(182, 101);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(48, 17);
+            this.label17.Size = new System.Drawing.Size(42, 13);
             this.label17.TabIndex = 13;
             this.label17.Text = "Swasta";
             // 
@@ -245,7 +247,7 @@
             this.label16.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(182, 72);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(115, 17);
+            this.label16.Size = new System.Drawing.Size(96, 13);
             this.label16.TabIndex = 12;
             this.label16.Text = "SMA Nusa Bangsa";
             // 
@@ -254,7 +256,7 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(164, 234);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(12, 17);
+            this.label15.Size = new System.Drawing.Size(10, 13);
             this.label15.TabIndex = 11;
             this.label15.Text = ":";
             // 
@@ -263,7 +265,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(164, 208);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(12, 17);
+            this.label14.Size = new System.Drawing.Size(10, 13);
             this.label14.TabIndex = 10;
             this.label14.Text = ":";
             // 
@@ -272,7 +274,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(164, 160);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(12, 17);
+            this.label13.Size = new System.Drawing.Size(10, 13);
             this.label13.TabIndex = 9;
             this.label13.Text = ":";
             // 
@@ -281,7 +283,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(164, 129);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(12, 17);
+            this.label12.Size = new System.Drawing.Size(10, 13);
             this.label12.TabIndex = 8;
             this.label12.Text = ":";
             // 
@@ -290,7 +292,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(164, 101);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(12, 17);
+            this.label11.Size = new System.Drawing.Size(10, 13);
             this.label11.TabIndex = 7;
             this.label11.Text = ":";
             // 
@@ -299,7 +301,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(164, 72);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(12, 17);
+            this.label10.Size = new System.Drawing.Size(10, 13);
             this.label10.TabIndex = 6;
             this.label10.Text = ":";
             this.label10.Click += new System.EventHandler(this.label10_Click);
@@ -309,7 +311,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(15, 234);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 17);
+            this.label9.Size = new System.Drawing.Size(35, 13);
             this.label9.TabIndex = 5;
             this.label9.Text = "Email";
             // 
@@ -318,7 +320,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(15, 208);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 17);
+            this.label8.Size = new System.Drawing.Size(29, 13);
             this.label8.TabIndex = 4;
             this.label8.Text = "Telp";
             // 
@@ -327,7 +329,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(15, 160);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 17);
+            this.label7.Size = new System.Drawing.Size(88, 13);
             this.label7.TabIndex = 3;
             this.label7.Text = "Alamat Sekolah";
             // 
@@ -336,7 +338,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(15, 129);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 17);
+            this.label6.Size = new System.Drawing.Size(59, 13);
             this.label6.TabIndex = 2;
             this.label6.Text = "Akreditasi";
             // 
@@ -345,7 +347,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(15, 101);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 17);
+            this.label5.Size = new System.Drawing.Size(39, 13);
             this.label5.TabIndex = 1;
             this.label5.Text = "Status";
             // 
@@ -354,7 +356,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(15, 72);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 17);
+            this.label4.Size = new System.Drawing.Size(82, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "Nama Sekolah";
             // 
@@ -375,47 +377,51 @@
             this.label29.ForeColor = System.Drawing.Color.Black;
             this.label29.Location = new System.Drawing.Point(301, 26);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(437, 25);
+            this.label29.Size = new System.Drawing.Size(358, 20);
             this.label29.TabIndex = 0;
             this.label29.Text = "Jumlah tenaga pengajar dan siswa yang terdaftar ";
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel8.Controls.Add(this.label40);
-            this.panel8.Controls.Add(this.label39);
+            this.panel8.Controls.Add(this.label1);
+            this.panel8.Controls.Add(this.DetailSiswa);
+            this.panel8.Controls.Add(this.DetailGuru);
             this.panel8.Controls.Add(this.label30);
             this.panel8.Controls.Add(this.label31);
-            this.panel8.Controls.Add(this.label32);
-            this.panel8.Controls.Add(this.label33);
+            this.panel8.Controls.Add(this.JmlhSiswa);
+            this.panel8.Controls.Add(this.JmlhGuru);
             this.panel8.Location = new System.Drawing.Point(161, 92);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(722, 138);
             this.panel8.TabIndex = 7;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
-            // label40
+            // DetailSiswa
             // 
-            this.label40.AutoSize = true;
-            this.label40.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label40.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.Color.White;
-            this.label40.Location = new System.Drawing.Point(490, 83);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(72, 17);
-            this.label40.TabIndex = 11;
-            this.label40.Text = "Lihat Detail";
+            this.DetailSiswa.AutoSize = true;
+            this.DetailSiswa.BackColor = System.Drawing.Color.RoyalBlue;
+            this.DetailSiswa.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DetailSiswa.ForeColor = System.Drawing.Color.White;
+            this.DetailSiswa.Location = new System.Drawing.Point(490, 83);
+            this.DetailSiswa.Name = "DetailSiswa";
+            this.DetailSiswa.Size = new System.Drawing.Size(64, 13);
+            this.DetailSiswa.TabIndex = 11;
+            this.DetailSiswa.Text = "Lihat Detail";
+            this.DetailSiswa.Click += new System.EventHandler(this.DetailSiswa_Click);
             // 
-            // label39
+            // DetailGuru
             // 
-            this.label39.AutoSize = true;
-            this.label39.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label39.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.Color.White;
-            this.label39.Location = new System.Drawing.Point(225, 77);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(72, 17);
-            this.label39.TabIndex = 10;
-            this.label39.Text = "Lihat Detail";
+            this.DetailGuru.AutoSize = true;
+            this.DetailGuru.BackColor = System.Drawing.Color.RoyalBlue;
+            this.DetailGuru.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DetailGuru.ForeColor = System.Drawing.Color.White;
+            this.DetailGuru.Location = new System.Drawing.Point(225, 77);
+            this.DetailGuru.Name = "DetailGuru";
+            this.DetailGuru.Size = new System.Drawing.Size(64, 13);
+            this.DetailGuru.TabIndex = 10;
+            this.DetailGuru.Text = "Lihat Detail";
+            this.DetailGuru.Click += new System.EventHandler(this.DetailGuru_Click);
             // 
             // label30
             // 
@@ -424,7 +430,7 @@
             this.label30.ForeColor = System.Drawing.Color.White;
             this.label30.Location = new System.Drawing.Point(444, 38);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(124, 45);
+            this.label30.Size = new System.Drawing.Size(102, 37);
             this.label30.TabIndex = 3;
             this.label30.Text = "SISWA";
             // 
@@ -435,31 +441,29 @@
             this.label31.ForeColor = System.Drawing.Color.White;
             this.label31.Location = new System.Drawing.Point(193, 32);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(113, 45);
+            this.label31.Size = new System.Drawing.Size(94, 37);
             this.label31.TabIndex = 2;
             this.label31.Text = "GURU";
             // 
-            // label32
+            // JmlhSiswa
             // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Ebrima", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.White;
-            this.label32.Location = new System.Drawing.Point(369, 34);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(85, 50);
-            this.label32.TabIndex = 1;
-            this.label32.Text = "120";
+            this.JmlhSiswa.AutoSize = true;
+            this.JmlhSiswa.Font = new System.Drawing.Font("Ebrima", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JmlhSiswa.ForeColor = System.Drawing.Color.White;
+            this.JmlhSiswa.Location = new System.Drawing.Point(369, 34);
+            this.JmlhSiswa.Name = "JmlhSiswa";
+            this.JmlhSiswa.Size = new System.Drawing.Size(0, 41);
+            this.JmlhSiswa.TabIndex = 1;
             // 
-            // label33
+            // JmlhGuru
             // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Ebrima", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(141, 28);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(64, 50);
-            this.label33.TabIndex = 0;
-            this.label33.Text = "25";
+            this.JmlhGuru.AutoSize = true;
+            this.JmlhGuru.Font = new System.Drawing.Font("Ebrima", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JmlhGuru.ForeColor = System.Drawing.Color.White;
+            this.JmlhGuru.Location = new System.Drawing.Point(141, 28);
+            this.JmlhGuru.Name = "JmlhGuru";
+            this.JmlhGuru.Size = new System.Drawing.Size(0, 41);
+            this.JmlhGuru.TabIndex = 0;
             // 
             // panel6
             // 
@@ -496,7 +500,7 @@
             this.label42.ForeColor = System.Drawing.Color.Black;
             this.label42.Location = new System.Drawing.Point(293, 109);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(162, 17);
+            this.label42.Size = new System.Drawing.Size(136, 13);
             this.label42.TabIndex = 17;
             this.label42.Text = "Sarana Olahraga SMANBA";
             // 
@@ -507,7 +511,7 @@
             this.label43.ForeColor = System.Drawing.Color.Black;
             this.label43.Location = new System.Drawing.Point(293, 89);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(137, 17);
+            this.label43.Size = new System.Drawing.Size(116, 13);
             this.label43.TabIndex = 16;
             this.label43.Text = "Senin, 29 Januari 2024";
             // 
@@ -518,7 +522,7 @@
             this.label44.ForeColor = System.Drawing.Color.Black;
             this.label44.Location = new System.Drawing.Point(219, 41);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(353, 17);
+            this.label44.Size = new System.Drawing.Size(292, 13);
             this.label44.TabIndex = 15;
             this.label44.Text = " Turnamen olahraga seperti futsal, basket, voli, dan e-sport";
             // 
@@ -529,7 +533,7 @@
             this.label45.ForeColor = System.Drawing.Color.Black;
             this.label45.Location = new System.Drawing.Point(276, 108);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(11, 17);
+            this.label45.Size = new System.Drawing.Size(9, 13);
             this.label45.TabIndex = 14;
             this.label45.Text = ":";
             // 
@@ -540,7 +544,7 @@
             this.label46.ForeColor = System.Drawing.Color.Black;
             this.label46.Location = new System.Drawing.Point(276, 89);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(11, 17);
+            this.label46.Size = new System.Drawing.Size(9, 13);
             this.label46.TabIndex = 13;
             this.label46.Text = ":";
             // 
@@ -551,7 +555,7 @@
             this.label47.ForeColor = System.Drawing.Color.Black;
             this.label47.Location = new System.Drawing.Point(223, 108);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(47, 17);
+            this.label47.Size = new System.Drawing.Size(40, 13);
             this.label47.TabIndex = 11;
             this.label47.Text = "Lokasi";
             // 
@@ -562,7 +566,7 @@
             this.label48.ForeColor = System.Drawing.Color.Black;
             this.label48.Location = new System.Drawing.Point(223, 89);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(48, 17);
+            this.label48.Size = new System.Drawing.Size(41, 13);
             this.label48.TabIndex = 10;
             this.label48.Text = "Waktu";
             // 
@@ -583,7 +587,7 @@
             this.label49.ForeColor = System.Drawing.Color.Black;
             this.label49.Location = new System.Drawing.Point(222, 15);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(169, 23);
+            this.label49.Size = new System.Drawing.Size(142, 19);
             this.label49.TabIndex = 8;
             this.label49.Text = "Turnamen Olahraga";
             // 
@@ -594,7 +598,7 @@
             this.label28.ForeColor = System.Drawing.Color.Black;
             this.label28.Location = new System.Drawing.Point(435, 20);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(204, 25);
+            this.label28.Size = new System.Drawing.Size(169, 20);
             this.label28.TabIndex = 0;
             this.label28.Text = "Agenda Terdekat 2024";
             // 
@@ -623,7 +627,7 @@
             this.label38.ForeColor = System.Drawing.Color.Black;
             this.label38.Location = new System.Drawing.Point(223, 55);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(432, 17);
+            this.label38.Size = new System.Drawing.Size(358, 13);
             this.label38.TabIndex = 18;
             this.label38.Text = "Lukisan warna-warni, patung yang menginspirasi, dan foto yang menarik.";
             // 
@@ -634,7 +638,7 @@
             this.label37.ForeColor = System.Drawing.Color.Black;
             this.label37.Location = new System.Drawing.Point(293, 109);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(73, 17);
+            this.label37.Size = new System.Drawing.Size(62, 13);
             this.label37.TabIndex = 17;
             this.label37.Text = "Ruang Seni";
             // 
@@ -645,7 +649,7 @@
             this.label36.ForeColor = System.Drawing.Color.Black;
             this.label36.Location = new System.Drawing.Point(293, 89);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(140, 17);
+            this.label36.Size = new System.Drawing.Size(118, 13);
             this.label36.TabIndex = 16;
             this.label36.Text = "Jumat, 26 Januari 2024";
             // 
@@ -656,7 +660,7 @@
             this.label27.ForeColor = System.Drawing.Color.Black;
             this.label27.Location = new System.Drawing.Point(223, 38);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(440, 17);
+            this.label27.Size = new System.Drawing.Size(372, 13);
             this.label27.TabIndex = 15;
             this.label27.Text = "Saksikan keindahan dan kreativitas siswa dalam Pameran Seni Siswa kami. ";
             // 
@@ -667,7 +671,7 @@
             this.label35.ForeColor = System.Drawing.Color.Black;
             this.label35.Location = new System.Drawing.Point(276, 108);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(11, 17);
+            this.label35.Size = new System.Drawing.Size(9, 13);
             this.label35.TabIndex = 14;
             this.label35.Text = ":";
             // 
@@ -678,7 +682,7 @@
             this.label34.ForeColor = System.Drawing.Color.Black;
             this.label34.Location = new System.Drawing.Point(276, 89);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(11, 17);
+            this.label34.Size = new System.Drawing.Size(9, 13);
             this.label34.TabIndex = 13;
             this.label34.Text = ":";
             // 
@@ -689,7 +693,7 @@
             this.label26.ForeColor = System.Drawing.Color.Black;
             this.label26.Location = new System.Drawing.Point(223, 108);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(47, 17);
+            this.label26.Size = new System.Drawing.Size(40, 13);
             this.label26.TabIndex = 11;
             this.label26.Text = "Lokasi";
             // 
@@ -700,7 +704,7 @@
             this.label24.ForeColor = System.Drawing.Color.Black;
             this.label24.Location = new System.Drawing.Point(223, 89);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(48, 17);
+            this.label24.Size = new System.Drawing.Size(41, 13);
             this.label24.TabIndex = 10;
             this.label24.Text = "Waktu";
             // 
@@ -721,7 +725,7 @@
             this.label23.ForeColor = System.Drawing.Color.Black;
             this.label23.Location = new System.Drawing.Point(222, 15);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(169, 23);
+            this.label23.Size = new System.Drawing.Size(142, 19);
             this.label23.TabIndex = 8;
             this.label23.Text = "Pameran Seni Siswa";
             // 
@@ -733,7 +737,7 @@
             this.label51.ForeColor = System.Drawing.Color.DarkOrange;
             this.label51.Location = new System.Drawing.Point(74, 19);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(235, 31);
+            this.label51.Size = new System.Drawing.Size(195, 25);
             this.label51.TabIndex = 33;
             this.label51.Text = "SMA NUSA BANGSA";
             // 
@@ -755,7 +759,7 @@
             this.label52.ForeColor = System.Drawing.Color.Black;
             this.label52.Location = new System.Drawing.Point(77, 50);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(247, 17);
+            this.label52.Size = new System.Drawing.Size(206, 13);
             this.label52.TabIndex = 35;
             this.label52.Text = "Mencerdaskan anak bangsa untuk negeri";
             // 
@@ -767,7 +771,7 @@
             this.label53.ForeColor = System.Drawing.Color.White;
             this.label53.Location = new System.Drawing.Point(28, 9);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(45, 17);
+            this.label53.Size = new System.Drawing.Size(38, 13);
             this.label53.TabIndex = 23;
             this.label53.Text = "Home";
             // 
@@ -779,9 +783,10 @@
             this.label54.ForeColor = System.Drawing.Color.White;
             this.label54.Location = new System.Drawing.Point(17, 9);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(70, 17);
+            this.label54.Size = new System.Drawing.Size(60, 13);
             this.label54.TabIndex = 23;
             this.label54.Text = "Kehadiran";
+            this.label54.Click += new System.EventHandler(this.label54_Click);
             // 
             // label55
             // 
@@ -791,7 +796,7 @@
             this.label55.ForeColor = System.Drawing.Color.White;
             this.label55.Location = new System.Drawing.Point(11, 8);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(82, 17);
+            this.label55.Size = new System.Drawing.Size(70, 13);
             this.label55.TabIndex = 24;
             this.label55.Text = "Kompensasi";
             this.label55.Click += new System.EventHandler(this.label55_Click);
@@ -835,9 +840,21 @@
             this.panel13.Size = new System.Drawing.Size(1070, 85);
             this.panel13.TabIndex = 31;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(10, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 21);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Refresh";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1065, 610);
@@ -910,8 +927,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label JmlhGuru;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label26;
@@ -922,8 +938,8 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label DetailSiswa;
+        private System.Windows.Forms.Label DetailGuru;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label43;
@@ -944,5 +960,7 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;
+        public System.Windows.Forms.Label JmlhSiswa;
+        private System.Windows.Forms.Label label1;
     }
 }
