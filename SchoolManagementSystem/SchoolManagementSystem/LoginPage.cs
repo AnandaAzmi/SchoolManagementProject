@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -45,23 +46,44 @@ namespace SchoolManagementSystem
 
         private void LoginBt_Click(object sender, EventArgs e)
         {
-            if (usernameTB.Text == "" || PasswordTB.Text=="")
-            {
-                MessageBox.Show("Enter Username and Password");
+            string username = usernameTB.Text;
+            string password = PasswordTB.Text;
+            bool masuk = false;
 
-            }
-            else if (usernameTB.Text == "Admin" && PasswordTB.Text == "Password")
+            if (String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
             {
-                MainMenu Obj = new MainMenu();
-                Obj.Show();
-                this.Hide();
-
+                MessageBox.Show("Tidak boleh ada kolom yang kosong");
             }
             else
             {
-                MessageBox.Show("Wrong Username or Password");
-                usernameTB.Text = "";
-                PasswordTB.Text = "";
+                var database = new Database();
+                if (database.connect_db())
+                {
+                    string query = "SELECT * FROM admin";
+                    MySqlCommand mySqlCommand = new MySqlCommand(query);
+                    mySqlCommand.Connection = database.mySqlConnection;
+
+                    MySqlDataReader reader = mySqlCommand.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        if (username.Equals(reader.GetString("AdUsername")) && password.Equals(reader.GetString("AdPass")))
+                        {
+                            masuk = true;
+                        }
+                    }
+
+                    if (masuk)
+                    {
+                        MessageBox.Show("Login Sukses");
+                        MainMenu obj = new MainMenu();
+                        obj.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Login Invalid");
+                    }
+                }
             }
         }
     }

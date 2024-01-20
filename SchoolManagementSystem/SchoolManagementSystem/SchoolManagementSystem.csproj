@@ -129,30 +129,6 @@
       <DependentUpon>DaftarSiswa.cs</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
-    <Compile Include="EditGuru.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditGuru.Designer.cs">
-      <DependentUpon>EditGuru.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EditSiswa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditSiswa.Designer.cs">
-      <DependentUpon>EditSiswa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HapusGuru.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HapusGuru.Designer.cs">
-      <DependentUpon>HapusGuru.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HapusSiswa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HapusSiswa.Designer.cs">
-      <DependentUpon>HapusSiswa.cs</DependentUpon>
-    </Compile>
     <Compile Include="Kehadiran.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +146,18 @@
     </Compile>
     <Compile Include="DaftarGuru.Designer.cs">
       <DependentUpon>DaftarGuru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingPage.Designer.cs">
+      <DependentUpon>LoadingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
@@ -189,32 +177,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SchoolManagementDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="TambahGuru.cs">
+    <Compile Include="TambahAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TambahGuru.Designer.cs">
-      <DependentUpon>TambahGuru.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TambahSiswa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TambahSiswa.Designer.cs">
-      <DependentUpon>TambahSiswa.cs</DependentUpon>
+    <Compile Include="TambahAdmin.Designer.cs">
+      <DependentUpon>TambahAdmin.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="DaftarSiswa.resx">
       <DependentUpon>DaftarSiswa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditGuru.resx">
-      <DependentUpon>EditGuru.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditSiswa.resx">
-      <DependentUpon>EditSiswa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HapusGuru.resx">
-      <DependentUpon>HapusGuru.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HapusSiswa.resx">
-      <DependentUpon>HapusSiswa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kehadiran.resx">
       <DependentUpon>Kehadiran.cs</DependentUpon>
@@ -224,6 +194,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DaftarGuru.resx">
       <DependentUpon>DaftarGuru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingPage.resx">
+      <DependentUpon>LoadingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
@@ -237,11 +213,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="TambahGuru.resx">
-      <DependentUpon>TambahGuru.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TambahSiswa.resx">
-      <DependentUpon>TambahSiswa.cs</DependentUpon>
+    <EmbeddedResource Include="TambahAdmin.resx">
+      <DependentUpon>TambahAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

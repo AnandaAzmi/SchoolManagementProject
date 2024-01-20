@@ -18,26 +18,9 @@ namespace SchoolManagementSystem
         {
             InitializeComponent();
 
-            var database = new Database();
-            if (database.connect_db())
-            {
-                string query = "SELECT KelNama FROM kelas";
-                MySqlCommand mySqlCommand = new MySqlCommand(query);
-                mySqlCommand.Connection = database.mySqlConnection;
+            IsiFormKelas();
+            IsiFilterKelas();
 
-                DataTable dt = new DataTable();
-                dt.Load(mySqlCommand.ExecuteReader());
-                database.close_db();
-
-                HadirKelas.DataSource = dt;
-                HadirKelas.ValueMember = "KelNama";
-                SelectFilter.DataSource = dt;
-                SelectFilter.ValueMember = "KelNama";
-            }
-            else
-            {
-                MessageBox.Show("Database error");
-            }
         }
 
         private void Kehadiran_Load(object sender, EventArgs e)
@@ -76,7 +59,6 @@ namespace SchoolManagementSystem
         private void label7_Click(object sender, EventArgs e)
         {
             MySqlCommand cmd;
-
             var database = new Database();
             if (database.connect_db())
             {
@@ -136,7 +118,7 @@ namespace SchoolManagementSystem
             if (database.connect_db())
             {
                 string query = "SELECT `kehadiran`.*, `siswa`.`SisKelas` FROM `kehadiran` LEFT JOIN `siswa` ON `kehadiran`.`DirSiswa` = `siswa`.`SisNama` " +
-                    "WHERE `kehadiran`.`DirTanggal` LIKE '" + FilterTanggal.Text + "' AND `siswa`.`SisKelas` = '" + SelectFilter.Text + "'; ";
+                    "WHERE `kehadiran`.`DirTanggal` LIKE '" + FilterTanggal.Text + "' AND `siswa`.`SisKelas` = '" + SelectFilter.SelectedValue + "'; ";
                 MySqlCommand mySqlCommand = new MySqlCommand(query);
                 mySqlCommand.Connection = database.mySqlConnection;
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
@@ -165,8 +147,84 @@ namespace SchoolManagementSystem
 
         private void label10_Click(object sender, EventArgs e)
         {
+            Kehadiran obj = new Kehadiran();
+            obj.Show();
+            this.Close();
+        }
+
+        private void HadirKelas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SelectFilter_SelectionChangeCommitted(object sender, EventArgs e)
+        {
             IsiTabelKehadiranKelas();
             filter = true;
+        }
+
+        private void IsiFormKelas ()
+        {
+            var database = new Database();
+            if (database.connect_db())
+            {
+                string query = "SELECT KelNama FROM kelas";
+                MySqlCommand mySqlCommand = new MySqlCommand(query);
+                mySqlCommand.Connection = database.mySqlConnection;
+
+                DataTable dt = new DataTable();
+                dt.Load(mySqlCommand.ExecuteReader());
+                database.close_db();
+
+                HadirKelas.DataSource = dt;
+                HadirKelas.ValueMember = "KelNama";
+            }
+            else
+            {
+                MessageBox.Show("Database error");
+            }
+        }
+
+        private void IsiFilterKelas()
+        {
+            var database = new Database();
+            if (database.connect_db())
+            {
+                string query = "SELECT KelNama FROM kelas";
+                MySqlCommand mySqlCommand = new MySqlCommand(query);
+                mySqlCommand.Connection = database.mySqlConnection;
+
+                DataTable dt = new DataTable();
+                dt.Load(mySqlCommand.ExecuteReader());
+                database.close_db();
+
+                SelectFilter.DataSource = dt;
+                SelectFilter.ValueMember = "KelNama";
+            }
+            else
+            {
+                MessageBox.Show("Database error");
+            }
+        }
+
+        private void FilterTanggal_ValueChanged(object sender, EventArgs e)
+        {
+            IsiTabelKehadiranKelas();
+            filter = true;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Kehadiran obj = new Kehadiran();
+            obj.Show();
+            this.Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Kompensasi obj = new Kompensasi();
+            obj.Show();
+            this.Close();
         }
     }
 }

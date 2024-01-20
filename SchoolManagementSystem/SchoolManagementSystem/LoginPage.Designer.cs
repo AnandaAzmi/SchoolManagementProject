@@ -32,16 +32,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.LoginPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.LoginBt = new System.Windows.Forms.Button();
-            this.usernameTB = new System.Windows.Forms.TextBox();
             this.PasswordTB = new System.Windows.Forms.TextBox();
-            this.resetLb = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.usernameTB = new System.Windows.Forms.TextBox();
+            this.LoginBt = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.LoginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -50,10 +48,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Mistral", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(190, 142);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 56);
+            this.label1.Size = new System.Drawing.Size(117, 44);
             this.label1.TabIndex = 1;
             this.label1.Text = "Login";
             // 
@@ -71,8 +69,6 @@
             // LoginPanel
             // 
             this.LoginPanel.BackColor = System.Drawing.Color.White;
-            this.LoginPanel.Controls.Add(this.label7);
-            this.LoginPanel.Controls.Add(this.resetLb);
             this.LoginPanel.Controls.Add(this.PasswordTB);
             this.LoginPanel.Controls.Add(this.usernameTB);
             this.LoginPanel.Controls.Add(this.LoginBt);
@@ -89,54 +85,19 @@
             this.LoginPanel.TabIndex = 1;
             this.LoginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.LoginPanel_Paint);
             // 
-            // pictureBox1
+            // PasswordTB
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-10, -15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1073, 651);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            this.PasswordTB.Location = new System.Drawing.Point(200, 287);
+            this.PasswordTB.Name = "PasswordTB";
+            this.PasswordTB.Size = new System.Drawing.Size(220, 21);
+            this.PasswordTB.TabIndex = 9;
             // 
-            // label2
+            // usernameTB
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(66, 244);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 23);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Username";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(66, 287);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 23);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Password";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(178, 244);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(16, 17);
-            this.label4.TabIndex = 5;
-            this.label4.Text = ": ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(178, 287);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 17);
-            this.label5.TabIndex = 6;
-            this.label5.Text = ": ";
+            this.usernameTB.Location = new System.Drawing.Point(200, 241);
+            this.usernameTB.Name = "usernameTB";
+            this.usernameTB.Size = new System.Drawing.Size(220, 21);
+            this.usernameTB.TabIndex = 8;
             // 
             // LoginBt
             // 
@@ -151,45 +112,58 @@
             this.LoginBt.UseVisualStyleBackColor = false;
             this.LoginBt.Click += new System.EventHandler(this.LoginBt_Click);
             // 
-            // usernameTB
+            // label5
             // 
-            this.usernameTB.Location = new System.Drawing.Point(200, 241);
-            this.usernameTB.Name = "usernameTB";
-            this.usernameTB.Size = new System.Drawing.Size(220, 24);
-            this.usernameTB.TabIndex = 8;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(178, 287);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(13, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = ": ";
             // 
-            // PasswordTB
+            // label4
             // 
-            this.PasswordTB.Location = new System.Drawing.Point(200, 287);
-            this.PasswordTB.Name = "PasswordTB";
-            this.PasswordTB.Size = new System.Drawing.Size(220, 24);
-            this.PasswordTB.TabIndex = 9;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(178, 244);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(13, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = ": ";
             // 
-            // resetLb
+            // label3
             // 
-            this.resetLb.AutoSize = true;
-            this.resetLb.Font = new System.Drawing.Font("Ebrima", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resetLb.Location = new System.Drawing.Point(290, 431);
-            this.resetLb.Name = "resetLb";
-            this.resetLb.Size = new System.Drawing.Size(53, 23);
-            this.resetLb.TabIndex = 10;
-            this.resetLb.Text = "Reset";
-            this.resetLb.Click += new System.EventHandler(this.resetLb_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(66, 287);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 19);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Password";
             // 
-            // label7
+            // label2
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(163, 435);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(121, 17);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Forgot Password ?";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(66, 244);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 19);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Username";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-10, -15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1073, 651);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // LoginPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1051, 613);
@@ -221,7 +195,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox PasswordTB;
         private System.Windows.Forms.TextBox usernameTB;
-        private System.Windows.Forms.Label resetLb;
-        private System.Windows.Forms.Label label7;
     }
 }

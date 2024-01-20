@@ -51,11 +51,12 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.SelectFilter = new System.Windows.Forms.ComboBox();
             this.FilterTanggal = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -164,6 +165,7 @@
             this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 23;
             this.label1.Text = "Kehadiran";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel3
             // 
@@ -187,6 +189,7 @@
             this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 24;
             this.label2.Text = "Kompensasi";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label4
             // 
@@ -212,6 +215,7 @@
             this.HadirKelas.Name = "HadirKelas";
             this.HadirKelas.Size = new System.Drawing.Size(159, 21);
             this.HadirKelas.TabIndex = 31;
+            this.HadirKelas.SelectedIndexChanged += new System.EventHandler(this.HadirKelas_SelectedIndexChanged);
             this.HadirKelas.SelectionChangeCommitted += new System.EventHandler(this.HadirKelas_SelectionChangeCommitted);
             // 
             // label5
@@ -326,8 +330,22 @@
             this.panel2.Location = new System.Drawing.Point(389, 228);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(66, 21);
+            this.panel2.Size = new System.Drawing.Size(95, 21);
             this.panel2.TabIndex = 43;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label10.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(15, 4);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(69, 13);
+            this.label10.TabIndex = 48;
+            this.label10.Text = "Hapus Filter";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label8
             // 
@@ -353,6 +371,7 @@
             this.SelectFilter.Name = "SelectFilter";
             this.SelectFilter.Size = new System.Drawing.Size(159, 21);
             this.SelectFilter.TabIndex = 44;
+            this.SelectFilter.SelectionChangeCommitted += new System.EventHandler(this.SelectFilter_SelectionChangeCommitted);
             // 
             // FilterTanggal
             // 
@@ -361,6 +380,7 @@
             this.FilterTanggal.Name = "FilterTanggal";
             this.FilterTanggal.Size = new System.Drawing.Size(157, 20);
             this.FilterTanggal.TabIndex = 47;
+            this.FilterTanggal.ValueChanged += new System.EventHandler(this.FilterTanggal_ValueChanged);
             // 
             // label9
             // 
@@ -375,19 +395,18 @@
             this.label9.TabIndex = 46;
             this.label9.Text = "Tanggal";
             // 
-            // label10
+            // label11
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label10.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(15, 4);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 13);
-            this.label10.TabIndex = 48;
-            this.label10.Text = "Filter";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(343, 88);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(135, 21);
+            this.label11.TabIndex = 48;
+            this.label11.Text = "Kehadiran Siswa";
             // 
             // Kehadiran
             // 
@@ -395,6 +414,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 737);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.FilterTanggal);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel2);
@@ -463,5 +483,6 @@
         private System.Windows.Forms.DateTimePicker FilterTanggal;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }

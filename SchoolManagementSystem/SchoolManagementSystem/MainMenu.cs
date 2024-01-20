@@ -20,53 +20,23 @@ namespace SchoolManagementSystem
             TampilJumlah();
         }
 
-        private void MainMenu_Load(object sender, EventArgs e)
+        private void Home_Click(object sender, EventArgs e)
         {
-            TampilJumlah();
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label27_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label55_Click(object sender, EventArgs e)
-        {
-            Kompensasi Obj = new Kompensasi();
-            Obj.Show();
-            this.Hide();
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void DetailGuru_Click(object sender, EventArgs e)
-        {
-            DaftarGuru obj = new DaftarGuru();
+            MainMenu obj = new MainMenu();
             obj.Show();
             this.Hide();
         }
 
-        private void DetailSiswa_Click(object sender, EventArgs e)
+        private void Kehadiran_Click(object sender, EventArgs e)
         {
-            DaftarSiswa obj = new DaftarSiswa();
+            Kehadiran obj = new Kehadiran();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+            Kompensasi obj = new Kompensasi();
             obj.Show();
             this.Hide();
         }
@@ -95,21 +65,30 @@ namespace SchoolManagementSystem
             }
         }
 
-        private void panel8_Paint(object sender, PaintEventArgs e)
+        private void MainMenu_Load_1(object sender, EventArgs e)
         {
 
         }
 
-        private void label54_Click(object sender, EventArgs e)
+        private void DetailGuru_Click(object sender, EventArgs e)
         {
-            Kehadiran obj = new Kehadiran();
+            DaftarGuru obj = new DaftarGuru();
             obj.Show();
             this.Hide();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void DetailSiswa_Click(object sender, EventArgs e)
         {
-            TampilJumlah();
+            DaftarSiswa obj = new DaftarSiswa();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void TambahAdmin_Click(object sender, EventArgs e)
+        {
+            TambahAdmin obj = new TambahAdmin();
+            obj.Show();
+            this.Hide();
         }
     }
 }

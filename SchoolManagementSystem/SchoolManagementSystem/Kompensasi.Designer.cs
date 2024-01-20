@@ -33,44 +33,42 @@
             this.label50 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.tombolKompensasi = new System.Windows.Forms.Label();
+            this.Kehadiran = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Home = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.jmlTb = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.AddBtn = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.nisnCb = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.namasiswaTb = new System.Windows.Forms.TextBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.kompenDgv = new System.Windows.Forms.DataGridView();
             this.kompensasiTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.schoolManagementDataSet = new SchoolManagementSystem.SchoolManagementDataSet();
             this.panel6 = new System.Windows.Forms.Panel();
             this.kompensasiTblTableAdapter = new SchoolManagementSystem.SchoolManagementDataSetTableAdapters.KompensasiTblTableAdapter();
             this.kompensasiTblTableAdapter1 = new SchoolManagementSystem.SchoolManagementDataSetTableAdapters.KompensasiTblTableAdapter();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dataGridDaftarKompensasi = new System.Windows.Forms.DataGridView();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.Tambah = new System.Windows.Forms.Label();
+            this.FormTanggal = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.FormNama = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.FormKelas = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.FormJam = new System.Windows.Forms.TextBox();
+            this.FormLunas = new System.Windows.Forms.CheckBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Edit = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kompenDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kompensasiTblBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.schoolManagementDataSet)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDaftarKompensasi)).BeginInit();
+            this.panel7.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label50
@@ -79,12 +77,13 @@
             this.label50.BackColor = System.Drawing.Color.SkyBlue;
             this.label50.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label50.ForeColor = System.Drawing.Color.Black;
-            this.label50.Location = new System.Drawing.Point(57, 39);
+            this.label50.Location = new System.Drawing.Point(61, 41);
             this.label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(206, 13);
             this.label50.TabIndex = 29;
             this.label50.Text = "Mencerdaskan anak bangsa untuk negeri";
+            this.label50.Click += new System.EventHandler(this.label50_Click);
             // 
             // label41
             // 
@@ -92,7 +91,7 @@
             this.label41.BackColor = System.Drawing.Color.SkyBlue;
             this.label41.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label41.Location = new System.Drawing.Point(55, 14);
+            this.label41.Location = new System.Drawing.Point(59, 16);
             this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(195, 25);
@@ -110,36 +109,38 @@
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // tombolKompensasi
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(8, 6);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Kompensasi";
+            this.tombolKompensasi.AutoSize = true;
+            this.tombolKompensasi.BackColor = System.Drawing.Color.RoyalBlue;
+            this.tombolKompensasi.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tombolKompensasi.ForeColor = System.Drawing.Color.White;
+            this.tombolKompensasi.Location = new System.Drawing.Point(4, 6);
+            this.tombolKompensasi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.tombolKompensasi.Name = "tombolKompensasi";
+            this.tombolKompensasi.Size = new System.Drawing.Size(70, 13);
+            this.tombolKompensasi.TabIndex = 24;
+            this.tombolKompensasi.Text = "Kompensasi";
+            this.tombolKompensasi.Click += new System.EventHandler(this.tombolKompensasi_Click);
             // 
-            // label1
+            // Kehadiran
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(13, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Kehadiran";
+            this.Kehadiran.AutoSize = true;
+            this.Kehadiran.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Kehadiran.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Kehadiran.ForeColor = System.Drawing.Color.White;
+            this.Kehadiran.Location = new System.Drawing.Point(10, 7);
+            this.Kehadiran.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Kehadiran.Name = "Kehadiran";
+            this.Kehadiran.Size = new System.Drawing.Size(60, 13);
+            this.Kehadiran.TabIndex = 23;
+            this.Kehadiran.Text = "Kehadiran";
+            this.Kehadiran.Click += new System.EventHandler(this.Kehadiran_Click);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel5.Controls.Add(this.label1);
+            this.panel5.Controls.Add(this.Kehadiran);
             this.panel5.Location = new System.Drawing.Point(601, 28);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
@@ -149,7 +150,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.tombolKompensasi);
             this.panel3.Location = new System.Drawing.Point(691, 28);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
@@ -186,167 +187,13 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(5, 8);
+            this.label4.Location = new System.Drawing.Point(314, 88);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(189, 21);
             this.label4.TabIndex = 24;
             this.label4.Text = "Data Kompensasi Siswa";
             this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.panel2);
-            this.flowLayoutPanel1.Controls.Add(this.panel4);
-            this.flowLayoutPanel1.Controls.Add(this.panel7);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(-3, 87);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(802, 401);
-            this.flowLayoutPanel1.TabIndex = 30;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(2, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(608, 38);
-            this.panel2.TabIndex = 25;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.dateTimePicker1);
-            this.panel4.Controls.Add(this.jmlTb);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.AddBtn);
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.nisnCb);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.namasiswaTb);
-            this.panel4.Location = new System.Drawing.Point(2, 44);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(800, 127);
-            this.panel4.TabIndex = 26;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
-            // jmlTb
-            // 
-            this.jmlTb.Location = new System.Drawing.Point(656, 40);
-            this.jmlTb.Margin = new System.Windows.Forms.Padding(2);
-            this.jmlTb.Name = "jmlTb";
-            this.jmlTb.Size = new System.Drawing.Size(126, 20);
-            this.jmlTb.TabIndex = 31;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(652, 12);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 19);
-            this.label8.TabIndex = 30;
-            this.label8.Text = "Jumlah";
-            // 
-            // AddBtn
-            // 
-            this.AddBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.AddBtn.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddBtn.ForeColor = System.Drawing.Color.White;
-            this.AddBtn.Location = new System.Drawing.Point(6, 80);
-            this.AddBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(76, 24);
-            this.AddBtn.TabIndex = 0;
-            this.AddBtn.Text = "Tambahkan";
-            this.AddBtn.UseVisualStyleBackColor = false;
-            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(440, 15);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 19);
-            this.label7.TabIndex = 28;
-            this.label7.Text = "Tanggal";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(214, 15);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 19);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "Nama Siswa";
-            // 
-            // nisnCb
-            // 
-            this.nisnCb.FormattingEnabled = true;
-            this.nisnCb.Location = new System.Drawing.Point(10, 38);
-            this.nisnCb.Margin = new System.Windows.Forms.Padding(2);
-            this.nisnCb.Name = "nisnCb";
-            this.nisnCb.Size = new System.Drawing.Size(138, 21);
-            this.nisnCb.TabIndex = 26;
-            this.nisnCb.SelectedIndexChanged += new System.EventHandler(this.nisnCb_SelectedIndexChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(7, 14);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 19);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "NISN";
-            // 
-            // namasiswaTb
-            // 
-            this.namasiswaTb.Enabled = false;
-            this.namasiswaTb.Location = new System.Drawing.Point(216, 41);
-            this.namasiswaTb.Margin = new System.Windows.Forms.Padding(2);
-            this.namasiswaTb.Name = "namasiswaTb";
-            this.namasiswaTb.Size = new System.Drawing.Size(198, 20);
-            this.namasiswaTb.TabIndex = 0;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.kompenDgv);
-            this.panel7.Location = new System.Drawing.Point(2, 175);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(800, 284);
-            this.panel7.TabIndex = 35;
-            // 
-            // kompenDgv
-            // 
-            this.kompenDgv.BackgroundColor = System.Drawing.Color.White;
-            this.kompenDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kompenDgv.Location = new System.Drawing.Point(20, 13);
-            this.kompenDgv.Margin = new System.Windows.Forms.Padding(2);
-            this.kompenDgv.Name = "kompenDgv";
-            this.kompenDgv.RowHeadersWidth = 51;
-            this.kompenDgv.RowTemplate.Height = 24;
-            this.kompenDgv.Size = new System.Drawing.Size(760, 317);
-            this.kompenDgv.TabIndex = 0;
-            this.kompenDgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kompenDgv_CellContentClick);
             // 
             // kompensasiTblBindingSource
             // 
@@ -361,7 +208,9 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel6.Controls.Add(this.label50);
             this.panel6.Controls.Add(this.panel1);
+            this.panel6.Controls.Add(this.label41);
             this.panel6.Controls.Add(this.pictureBox1);
             this.panel6.Controls.Add(this.panel5);
             this.panel6.Controls.Add(this.panel3);
@@ -379,24 +228,185 @@
             // 
             this.kompensasiTblTableAdapter1.ClearBeforeFill = true;
             // 
-            // dateTimePicker1
+            // dataGridDaftarKompensasi
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(444, 41);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(175, 20);
-            this.dateTimePicker1.TabIndex = 32;
-            this.dateTimePicker1.Value = new System.DateTime(2024, 2, 1, 0, 0, 0, 0);
+            this.dataGridDaftarKompensasi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridDaftarKompensasi.Location = new System.Drawing.Point(27, 273);
+            this.dataGridDaftarKompensasi.Name = "dataGridDaftarKompensasi";
+            this.dataGridDaftarKompensasi.Size = new System.Drawing.Size(747, 452);
+            this.dataGridDaftarKompensasi.TabIndex = 42;
+            this.dataGridDaftarKompensasi.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridDaftarKompensasi_CellMouseDoubleClick);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel7.Controls.Add(this.Tambah);
+            this.panel7.Location = new System.Drawing.Point(607, 210);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(78, 28);
+            this.panel7.TabIndex = 49;
+            // 
+            // Tambah
+            // 
+            this.Tambah.AutoSize = true;
+            this.Tambah.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Tambah.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tambah.ForeColor = System.Drawing.Color.White;
+            this.Tambah.Location = new System.Drawing.Point(15, 8);
+            this.Tambah.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Tambah.Name = "Tambah";
+            this.Tambah.Size = new System.Drawing.Size(49, 13);
+            this.Tambah.TabIndex = 23;
+            this.Tambah.Text = "Tambah";
+            this.Tambah.Click += new System.EventHandler(this.Tambah_Click);
+            // 
+            // FormTanggal
+            // 
+            this.FormTanggal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FormTanggal.Location = new System.Drawing.Point(528, 160);
+            this.FormTanggal.Name = "FormTanggal";
+            this.FormTanggal.Size = new System.Drawing.Size(157, 20);
+            this.FormTanggal.TabIndex = 48;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(524, 136);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 21);
+            this.label3.TabIndex = 47;
+            this.label3.Text = "Tanggal";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(306, 136);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 21);
+            this.label5.TabIndex = 46;
+            this.label5.Text = "Nama Siswa";
+            // 
+            // FormNama
+            // 
+            this.FormNama.FormattingEnabled = true;
+            this.FormNama.Items.AddRange(new object[] {
+            "X",
+            "XI",
+            "XII"});
+            this.FormNama.Location = new System.Drawing.Point(310, 160);
+            this.FormNama.Name = "FormNama";
+            this.FormNama.Size = new System.Drawing.Size(196, 21);
+            this.FormNama.TabIndex = 45;
+            this.FormNama.SelectionChangeCommitted += new System.EventHandler(this.FormNama_SelectionChangeCommitted);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(123, 136);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 21);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "Kelas\r\n";
+            // 
+            // FormKelas
+            // 
+            this.FormKelas.FormattingEnabled = true;
+            this.FormKelas.Items.AddRange(new object[] {
+            "X",
+            "XI",
+            "XII"});
+            this.FormKelas.Location = new System.Drawing.Point(127, 160);
+            this.FormKelas.Name = "FormKelas";
+            this.FormKelas.Size = new System.Drawing.Size(159, 21);
+            this.FormKelas.TabIndex = 43;
+            this.FormKelas.SelectionChangeCommitted += new System.EventHandler(this.FormKelas_SelectionChangeCommitted);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(123, 194);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 21);
+            this.label2.TabIndex = 50;
+            this.label2.Text = "Jumlah Jam";
+            // 
+            // FormJam
+            // 
+            this.FormJam.Location = new System.Drawing.Point(127, 218);
+            this.FormJam.Name = "FormJam";
+            this.FormJam.Size = new System.Drawing.Size(86, 20);
+            this.FormJam.TabIndex = 51;
+            // 
+            // FormLunas
+            // 
+            this.FormLunas.AutoSize = true;
+            this.FormLunas.Location = new System.Drawing.Point(253, 220);
+            this.FormLunas.Name = "FormLunas";
+            this.FormLunas.Size = new System.Drawing.Size(55, 17);
+            this.FormLunas.TabIndex = 52;
+            this.FormLunas.Text = "Lunas";
+            this.FormLunas.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel2.Controls.Add(this.Edit);
+            this.panel2.Location = new System.Drawing.Point(511, 210);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(78, 28);
+            this.panel2.TabIndex = 50;
+            // 
+            // Edit
+            // 
+            this.Edit.AutoSize = true;
+            this.Edit.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Edit.Font = new System.Drawing.Font("Ebrima", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Edit.ForeColor = System.Drawing.Color.White;
+            this.Edit.Location = new System.Drawing.Point(24, 8);
+            this.Edit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Edit.Name = "Edit";
+            this.Edit.Size = new System.Drawing.Size(27, 13);
+            this.Edit.TabIndex = 23;
+            this.Edit.Text = "Edit";
+            this.Edit.Click += new System.EventHandler(this.Edit_Click);
             // 
             // Kompensasi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(798, 492);
-            this.Controls.Add(this.label50);
-            this.Controls.Add(this.label41);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(800, 737);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.FormLunas);
+            this.Controls.Add(this.FormJam);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.FormTanggal);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.FormNama);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.FormKelas);
+            this.Controls.Add(this.dataGridDaftarKompensasi);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.panel6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -410,16 +420,15 @@
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kompenDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kompensasiTblBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.schoolManagementDataSet)).EndInit();
             this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDaftarKompensasi)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -430,31 +439,31 @@
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label tombolKompensasi;
+        private System.Windows.Forms.Label Kehadiran;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label Home;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox namasiswaTb;
-        private System.Windows.Forms.Button AddBtn;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox nisnCb;
-        private System.Windows.Forms.TextBox jmlTb;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.DataGridView kompenDgv;
         private SchoolManagementDataSet schoolManagementDataSet;
         private System.Windows.Forms.BindingSource kompensasiTblBindingSource;
         private SchoolManagementDataSetTableAdapters.KompensasiTblTableAdapter kompensasiTblTableAdapter;
         private SchoolManagementDataSetTableAdapters.KompensasiTblTableAdapter kompensasiTblTableAdapter1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView dataGridDaftarKompensasi;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label Tambah;
+        private System.Windows.Forms.DateTimePicker FormTanggal;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox FormNama;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox FormKelas;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox FormJam;
+        private System.Windows.Forms.CheckBox FormLunas;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label Edit;
     }
 }
